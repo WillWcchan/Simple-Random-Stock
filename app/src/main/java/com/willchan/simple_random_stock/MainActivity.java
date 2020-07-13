@@ -1,13 +1,15 @@
 package com.willchan.simple_random_stock;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.willchan.simple_random_stock.activities.AboutActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.about:
-                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, AboutActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
