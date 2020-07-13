@@ -8,7 +8,9 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.tabs.TabLayout;
 import com.willchan.simple_random_stock.activities.AboutActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,20 +24,24 @@ public class MainActivity extends AppCompatActivity {
         // This sets the toolbar as the app bar for the activity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // Source: https://material.io/develop/android/components/tab-layout/
+        // Set up the TabLayout to show the following tabs: Index, Stock, History
+        ViewPager pager = findViewById(R.id.viewpager);
+        TabLayout tabs = findViewById(R.id.tabs);
+        tabs.setupWithViewPager(pager);
     }
 
     // Source: https://www.studytonight.com/android/menu-in-android#:~:text=This%20is%20done%20by%20right%20clicking%20on%20res,in%20the%20Resource%20type.%20Then%2C%20click%20on%20OK.
     // When user selects one of the app bar items
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.about:
-                Intent intent = new Intent(this, AboutActivity.class);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+        if (item.getItemId() == R.id.about) {
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
+            return true;
+        } else
+            return super.onOptionsItemSelected(item);
     }
 
     // Source: https://www.studytonight.com/android/menu-in-android#:~:text=This%20is%20done%20by%20right%20clicking%20on%20res,in%20the%20Resource%20type.%20Then%2C%20click%20on%20OK.

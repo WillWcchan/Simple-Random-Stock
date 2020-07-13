@@ -5,4 +5,7 @@
     <string name="author_name">Author: William Chan</string>
     <string name="current_version">Version 1.0</string>
     <string name="app_logo">app_logo</string>
+    <string name="tab_index">U.S Index</string>
+    <string name="tab_stock">Stock Picked</string>
+    <string name="tab_history">History</string>
 </resources>
