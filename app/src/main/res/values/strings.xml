@@ -4,4 +4,5 @@
     <string name="contact_information">Contact Information:</string>
     <string name="author_name">Author: William Chan</string>
     <string name="current_version">Version 1.0</string>
+    <string name="app_logo">app_logo</string>
 </resources>
