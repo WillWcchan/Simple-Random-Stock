@@ -8,4 +8,10 @@
     <string name="tab_index">U.S Index</string>
     <string name="tab_stock">Stock Picked</string>
     <string name="tab_history">History</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_index">Index</string>
+    <string name="fragment_stock">Stock</string>
+    <string name="fragment_history">History</string>
 </resources>
