@@ -48,8 +48,8 @@ public class AboutActivity extends AppCompatActivity {
     @SuppressLint("all")
     public void sendEmail(View view) {
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
-        emailIntent.setData(Uri.parse(MAILTO));
         emailIntent.setType(TYPE);
+        emailIntent.setData(Uri.parse(MAILTO));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, SUBJECT);
         try {
             startActivity(Intent.createChooser(emailIntent, CHOOSE_MAIL_APP));
