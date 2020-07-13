@@ -47,7 +47,7 @@ public class AboutActivity extends AppCompatActivity {
     // Email link in the About Activity was clicked
     @SuppressLint("all")
     public void sendEmail(View view) {
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setType(TYPE);
         emailIntent.setData(Uri.parse(MAILTO));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, SUBJECT);
