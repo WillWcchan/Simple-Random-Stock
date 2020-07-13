@@ -1,5 +1,6 @@
 package com.willchan.simple_random_stock.activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -44,9 +45,11 @@ public class AboutActivity extends AppCompatActivity {
 
     // Source: https://www.tutorialspoint.com/android/android_sending_email.htm#:~:text=Intent%20Object%20-%20Extra%20to%20send%20Email%20,that%20i%20...%20%203%20more%20rows%20
     // Email link in the About Activity was clicked
+    @SuppressLint("all")
     public void sendEmail(View view) {
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
-        emailIntent.setDataAndType(Uri.parse(MAILTO), TYPE);
+        emailIntent.setData(Uri.parse(MAILTO));
+        emailIntent.setType(TYPE);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, SUBJECT);
         try {
             startActivity(Intent.createChooser(emailIntent, CHOOSE_MAIL_APP));
