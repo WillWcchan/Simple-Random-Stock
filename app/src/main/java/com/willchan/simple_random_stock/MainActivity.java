@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     // Source: https://www.studytonight.com/android/menu-in-android#:~:text=This%20is%20done%20by%20right%20clicking%20on%20res,in%20the%20Resource%20type.%20Then%2C%20click%20on%20OK.
