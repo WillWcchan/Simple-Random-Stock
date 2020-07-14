@@ -14,4 +14,9 @@
     <string name="fragment_index">Index</string>
     <string name="fragment_stock">Stock</string>
     <string name="fragment_history">History</string>
+    <string name="title_dow">Dow Jones 30</string>
+    <string name="title_points_today">Points today</string>
+    <string name="title_percentage_changed">Percentage Changed</string>
+    <string name="title_spy"><![CDATA[S&P 500]]></string>
+    <string name="title_nasdaq">Nasdaq</string>
 </resources>
