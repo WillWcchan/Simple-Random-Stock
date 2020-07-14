@@ -40,28 +40,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/title_dow"
                         android:textAllCaps="true"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/dow_points_today"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:text="@string/title_points_today"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/dow_percent_change"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:text="@string/title_percentage_changed"
-                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -104,28 +89,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/title_spy"
                         android:textAllCaps="true"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/sp500_points_today"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:text="@string/title_points_today"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/sp500_percent_change"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:text="@string/title_percentage_changed"
-                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -168,28 +138,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/title_nasdaq"
                         android:textAllCaps="true"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/nasdaq_points_today"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:text="@string/title_points_today"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/nasdaq_percent_change"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:text="@string/title_percentage_changed"
-                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -199,11 +154,5 @@
 
 
     </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30sp"
-        android:text="Quote not in realtime" />
 
 </LinearLayout>
