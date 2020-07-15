@@ -17,7 +17,7 @@ import com.willchan.simple_random_stock.R;
 public class AboutActivity extends AppCompatActivity {
     private final String MAILTO = "mailto:";
     private final String TYPE = "text/plain";
-    private final String SUBJECT = "Greetings Will from Simple-Random-Stock";
+    private final String SUBJECT = "Greetings Will from Simple-Random-StockEntity";
     private final String CHOOSE_MAIL_APP = "Choose Mail App";
     private final String NO_EMAIL_CLIENT_INSTALLED = "There is no email client installed.";
 

@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // Source: https://material.io/develop/android/components/tab-layout/
-        // Set up the TabLayout to show the following tabs: Index, Stock, History
+        // Set up the TabLayout to show the following tabs: Index, StockEntity, History
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         final ViewPager viewPager = findViewById(R.id.viewPager);
         PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
@@ -70,5 +70,4 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_file, menu);
         return true;
     }
-
 }

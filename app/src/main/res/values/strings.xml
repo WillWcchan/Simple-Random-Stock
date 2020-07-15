@@ -18,5 +18,11 @@
     <string name="title_points_today">Points today</string>
     <string name="title_percentage_changed">Percentage Changed</string>
     <string name="title_spy"><![CDATA[S&P 500]]></string>
-    <string name="title_nasdaq">Nasdaq</string>
+    <string name="title_nasdaq">Nasdaq 100</string>
+
+    <string name="stock_ticker">Stock Ticker</string>
+    <string name="stock_name">Stock Name</string>
+    <string name="stock_time_picked">Time</string>
+    <string name="delete_stock_history">Delete a stock from history</string>
+
 </resources>
