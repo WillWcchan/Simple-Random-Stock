@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.willchan.simple_random_stock"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -62,4 +62,8 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    // ProgressBar Dots Loader
+    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+
 }

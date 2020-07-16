@@ -1,6 +1,8 @@
 package com.willchan.simple_random_stock.fragments;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,17 +47,31 @@ public class IndexFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.card_dow_jones:
-                Toast.makeText(this.getContext(), "Dow", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.card_spy500:
-                Toast.makeText(this.getContext(), "SPY", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.card_nasdaq:
-                Toast.makeText(this.getContext(), "Nasdaq", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 Toast.makeText(this.getContext(), "Nothing happened", Toast.LENGTH_SHORT).show();
                 break;
         }
+        showDialog();
     }
+
+    void showDialog() {
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View view = inflater.inflate(R.layout.random_stock_dialog, null);
+        final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).setView(view).create();
+        alertDialog.setCancelable(true);
+        alertDialog.show();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                alertDialog.dismiss();
+            }
+        }, 1000);
+    }
+
 }
