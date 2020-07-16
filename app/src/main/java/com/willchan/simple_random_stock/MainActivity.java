@@ -15,6 +15,9 @@ import com.willchan.simple_random_stock.activities.AboutActivity;
 import com.willchan.simple_random_stock.adapters.TabLayoutAdapter;
 
 public class MainActivity extends AppCompatActivity {
+    private TabLayout tabLayout;
+    private TabLayoutAdapter tabLayoutAdapter;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Source: https://material.io/develop/android/components/tab-layout/
         // Set up the TabLayout to show the following tabs: Index, Stock, History
-        TabLayout tabLayout = findViewById(R.id.tabLayout);
-        final ViewPager viewPager = findViewById(R.id.viewPager);
-        TabLayoutAdapter tabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager = findViewById(R.id.viewPager);
+        tabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(tabLayoutAdapter);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -46,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+    }
+
+    public void selectCurrentTabToView(Tabs specifiedTab) {
+        TabLayout.Tab tab = tabLayout.getTabAt(specifiedTab.ordinal());
+        tab.select();
     }
 
     // Source: https://www.studytonight.com/android/menu-in-android#:~:text=This%20is%20done%20by%20right%20clicking%20on%20res,in%20the%20Resource%20type.%20Then%2C%20click%20on%20OK.
@@ -67,5 +75,9 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_file, menu);
         return true;
+    }
+
+    public enum Tabs {
+        INDEX, STOCK, HISTORY
     }
 }

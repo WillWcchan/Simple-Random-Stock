@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.willchan.simple_random_stock.MainActivity;
 import com.willchan.simple_random_stock.R;
 
 /**
@@ -56,7 +57,12 @@ public class IndexFragment extends Fragment implements View.OnClickListener {
                 Toast.makeText(this.getContext(), "Nothing happened", Toast.LENGTH_SHORT).show();
                 break;
         }
+
+        // Imitate getting a random stock
         showDialog();
+
+        // Change the tab to display the stock fragment
+        ((MainActivity) getActivity()).selectCurrentTabToView(MainActivity.Tabs.STOCK);
     }
 
     void showDialog() {
