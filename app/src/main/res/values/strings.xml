@@ -24,5 +24,8 @@
     <string name="stock_name">Stock Name</string>
     <string name="stock_time_picked">Time</string>
     <string name="delete_stock_history">Delete a stock from history</string>
+    <string name="no_stick_name_yet">No stock picked yet</string>
+    <string name="no_stock_ticker_yet">No ticker picked yet</string>
+    <string name="no_stock_date_picked_yet">No date picked yet</string>
 
 </resources>

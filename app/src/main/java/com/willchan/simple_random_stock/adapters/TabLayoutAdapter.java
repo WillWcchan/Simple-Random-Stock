@@ -1,5 +1,6 @@
 package com.willchan.simple_random_stock.adapters;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -8,10 +9,10 @@ import com.willchan.simple_random_stock.fragments.HistoryFragment;
 import com.willchan.simple_random_stock.fragments.IndexFragment;
 import com.willchan.simple_random_stock.fragments.StockFragment;
 
-public class PagerAdapter extends FragmentPagerAdapter {
+public class TabLayoutAdapter extends FragmentPagerAdapter {
     private int mNumOfTabs;
 
-    public PagerAdapter(FragmentManager fm, int NumOfTabs) {
+    public TabLayoutAdapter(FragmentManager fm, int NumOfTabs) {
         super(fm);
         this.mNumOfTabs = NumOfTabs;
     }
@@ -22,7 +23,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
      * @param position of the Tab item that was clicked in the TabLayout
      */
     @Override
-    public Fragment getItem(int position) {
+    public Fragment getItem(@NonNull int position) {
         switch (position) {
             case 0:
                 return new IndexFragment();

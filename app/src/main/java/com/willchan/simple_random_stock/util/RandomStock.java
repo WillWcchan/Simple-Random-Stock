@@ -1280,25 +1280,27 @@ public class RandomStock {
         return NASDAQ100_STOCK_NAME;
     }
 
-    public static void getRandomStock(StockIndex stockIndex) {
+    public static int getRandomStock(StockIndex stockIndex) {
+        int position = 0;
         if (stockIndex == StockIndex.DOW) {
-            int position = new Random().nextInt(DOW30_STOCK_TICKER.length);
+            position = new Random().nextInt(DOW30_STOCK_TICKER.length);
             String ticker = DOW30_STOCK_TICKER[position];
             String name = DOW30_STOCK_NAME[position];
             System.out.println("Name " + name + " and Ticker: " + ticker);
         } else if (stockIndex == StockIndex.SPY) {
-            int position = new Random().nextInt(SPY500_STOCK_TICKER.length);
+            position = new Random().nextInt(SPY500_STOCK_TICKER.length);
             String ticker = SPY500_STOCK_TICKER[position];
             String name = SPY500_STOCK_NAME[position];
             System.out.println("Name " + name + " and Ticker: " + ticker);
         } else if (stockIndex == StockIndex.NASDAQ) {
-            int position = new Random().nextInt(SPY500_STOCK_TICKER.length);
+            position = new Random().nextInt(SPY500_STOCK_TICKER.length);
             String ticker = SPY500_STOCK_TICKER[position];
             String name = SPY500_STOCK_NAME[position];
             System.out.println("Name " + name + " and Ticker: " + ticker);
         } else {
             System.out.println("Maybe there's a new ENUM declared?");
         }
+        return position;
     }
 
     public enum StockIndex {

@@ -1,5 +1,6 @@
-package com.willchan.simple_random_stock.entities;
+package com.willchan.simple_random_stock.roomdatabase.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -7,11 +8,10 @@ import androidx.room.TypeConverters;
 
 import com.willchan.simple_random_stock.util.DateConverter;
 
-import java.io.Serializable;
 import java.util.Date;
 
 @Entity(tableName = "stock_table")
-public class StockEntity implements Serializable {
+public class Stock {
 
     @PrimaryKey(autoGenerate = true)
     private int ID;
@@ -25,6 +25,12 @@ public class StockEntity implements Serializable {
     @ColumnInfo(name = "date")
     @TypeConverters(DateConverter.class)
     private Date date_picked;
+
+    public Stock(@NonNull String name, @NonNull String ticker) {
+        this.name = name;
+        this.ticker = ticker;
+        this.date_picked = new Date();
+    }
 
     public int getID() {
         return ID;
