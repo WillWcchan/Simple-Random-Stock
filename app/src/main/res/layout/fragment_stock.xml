@@ -11,9 +11,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20sp"
-            android:theme="@style/Theme.MaterialComponents.Light"
             app:cardCornerRadius="8sp"
-            app:cardElevation="8sp">
+            app:cardElevation="0dp"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -22,6 +23,7 @@
 
                         <!-- Media -->
                         <ImageView
+                            android:id="@+id/congratulationsImageView"
                             android:layout_width="match_parent"
                             android:layout_height="200sp"
                             android:adjustViewBounds="true"
@@ -37,6 +39,7 @@
 
                                 <!-- Title, secondary and supporting text -->
                                 <TextView
+                                    android:id="@+id/congratulationsTitle"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"

@@ -10,7 +10,6 @@
     <!-- Dow Jones Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_dow_jones"
-        android:onClick="onClick"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginLeft="30dp"
@@ -94,7 +93,6 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/title_spy"
-                        android:textAllCaps="true"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="24sp" />
 
@@ -152,7 +150,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
 
     </androidx.cardview.widget.CardView>
 

@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Display a current Fragment to be shown on the screen
     public void selectCurrentTabToView(Tabs specifiedTab) {
         TabLayout.Tab tab = tabLayout.getTabAt(specifiedTab.ordinal());
         tab.select();

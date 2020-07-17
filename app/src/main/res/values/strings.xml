@@ -30,5 +30,6 @@
     <string name="congratulations">Congratulations! Here is your random stock! </string>
     <string name="congratulations_picture">Congratulations picture</string>
     <string name="stock_name_hint">Apple (AAPL)</string>
+    <string name="no_random_stock_selected_yet">No random stock selected yet</string>
 
 </resources>
