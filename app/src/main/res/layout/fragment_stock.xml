@@ -3,12 +3,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.StockFragment">
 
-    <!--    <TextView-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="@string/fragment_stock"-->
-    <!--        android:textAppearance="?android:attr/textAppearanceLarge" />-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:cardCornerRadius="8sp"
+            app:cardElevation="8sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <!-- Media -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200sp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/congratulations_picture"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/congratulations" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                                <!-- Title, secondary and supporting text -->
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/congratulations"
+                                    android:textAllCaps="true"
+                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/stock_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:hint="@string/stock_name_hint"
+                                    android:textAppearance="?attr/textAppearanceBody2"
+                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>

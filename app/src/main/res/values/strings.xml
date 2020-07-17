@@ -27,5 +27,8 @@
     <string name="no_stick_name_yet">No stock picked yet</string>
     <string name="no_stock_ticker_yet">No ticker picked yet</string>
     <string name="no_stock_date_picked_yet">No date picked yet</string>
+    <string name="congratulations">Congratulations! Here is your random stock! </string>
+    <string name="congratulations_picture">Congratulations picture</string>
+    <string name="stock_name_hint">Apple (AAPL)</string>
 
 </resources>
