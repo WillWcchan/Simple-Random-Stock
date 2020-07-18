@@ -11,25 +11,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20sp"
+            android:clickable="true"
+            android:focusable="true"
             app:cardCornerRadius="8sp"
             app:cardElevation="0dp"
             android:theme="@style/Theme.MaterialComponents.Light"
             app:strokeWidth="1dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                        <!-- Media -->
-                        <ImageView
-                            android:id="@+id/congratulationsImageView"
-                            android:layout_width="match_parent"
-                            android:layout_height="200sp"
-                            android:adjustViewBounds="true"
-                            android:contentDescription="@string/congratulations_picture"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/congratulations" />
+                <!-- Media -->
+                <ImageView
+                    android:id="@+id/congratulationsImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200sp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/congratulations_picture"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/congratulations" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -49,7 +51,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@+id/stock_name"
+                                    android:id="@+id/stock_name_history"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="8dp"

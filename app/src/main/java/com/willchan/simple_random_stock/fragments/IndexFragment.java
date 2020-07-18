@@ -66,22 +66,26 @@ public class IndexFragment extends Fragment {
             public void run() {
                 alertDialog.dismiss();
             }
-        }, 1000);
+        }, 2000);
     }
+
 
     public class StockIndexSelectedCallBack implements View.OnClickListener {
 
         @Override
         public void onClick(View v) {
             if (v.getId() == R.id.card_dow_jones) {
+                dow_index.setEnabled(false); // prevent double clicks
                 position = RandomStock.getRandomStock(RandomStock.StockIndex.DOW);
                 name = RandomStock.getDow30StockName()[position];
                 ticker = RandomStock.getDow30StockTicker()[position];
             } else if (v.getId() == R.id.card_spy500) {
+                spy_index.setEnabled(false);  // prevent double clicks
                 position = RandomStock.getRandomStock(RandomStock.StockIndex.SPY);
                 name = RandomStock.getSpy500StockName()[position];
                 ticker = RandomStock.getSpy500StockTicker()[position];
             } else if (v.getId() == R.id.card_nasdaq) {
+                nasdaq_index.setEnabled(false);  // prevent double clicks
                 position = RandomStock.getRandomStock(RandomStock.StockIndex.NASDAQ);
                 name = RandomStock.getNasdaq100StockName()[position];
                 ticker = RandomStock.getNasdaq100StockTicker()[position];

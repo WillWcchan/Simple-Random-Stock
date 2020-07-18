@@ -32,6 +32,12 @@ public class Stock {
         this.date_picked = new Date();
     }
 
+    public Stock(@NonNull String name, @NonNull String ticker, @NonNull Date date) {
+        this.name = name;
+        this.ticker = ticker;
+        this.date_picked = date;
+    }
+
     public int getID() {
         return ID;
     }

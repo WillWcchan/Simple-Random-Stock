@@ -1,5 +1,7 @@
 package com.willchan.simple_random_stock.util;
 
+import android.util.Log;
+
 import java.util.Random;
 
 public class RandomStock {
@@ -1286,19 +1288,19 @@ public class RandomStock {
             position = new Random().nextInt(DOW30_STOCK_TICKER.length);
             String ticker = DOW30_STOCK_TICKER[position];
             String name = DOW30_STOCK_NAME[position];
-            System.out.println("Name " + name + " and Ticker: " + ticker);
+//            System.out.println("Name " + name + " and Ticker: " + ticker);
         } else if (stockIndex == StockIndex.SPY) {
             position = new Random().nextInt(SPY500_STOCK_TICKER.length);
             String ticker = SPY500_STOCK_TICKER[position];
             String name = SPY500_STOCK_NAME[position];
-            System.out.println("Name " + name + " and Ticker: " + ticker);
+//            System.out.println("Name " + name + " and Ticker: " + ticker);
         } else if (stockIndex == StockIndex.NASDAQ) {
-            position = new Random().nextInt(SPY500_STOCK_TICKER.length);
-            String ticker = SPY500_STOCK_TICKER[position];
-            String name = SPY500_STOCK_NAME[position];
-            System.out.println("Name " + name + " and Ticker: " + ticker);
+            position = new Random().nextInt(NASDAQ100_STOCK_TICKER.length);
+            String ticker = NASDAQ100_STOCK_TICKER[position];
+            String name = NASDAQ100_STOCK_NAME[position];
+//            System.out.println("Name " + name + " and Ticker: " + ticker);
         } else {
-            System.out.println("Maybe there's a new ENUM declared?");
+            Log.e(RandomStock.class.toString(), "Maybe there's a new ENUM declared?");
         }
         return position;
     }

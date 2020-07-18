@@ -11,16 +11,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.willchan.simple_random_stock.R;
+import com.willchan.simple_random_stock.interfaces.ItemClickListener;
 import com.willchan.simple_random_stock.roomdatabase.entities.Stock;
 
 import java.util.List;
 
 // The adapter caches data and populates the RecycleView
 public class HistoryListAdapter extends RecyclerView.Adapter<HistoryListAdapter.StockViewHolder> {
+    private ItemClickListener clickListener;
     private LayoutInflater inflater;
     private List<Stock> stocks; // Cached copy of stocks
+    private Context context;
 
     public HistoryListAdapter(Context context) {
+        this.context = context;
         inflater = LayoutInflater.from(context);
     }
 
@@ -28,8 +32,7 @@ public class HistoryListAdapter extends RecyclerView.Adapter<HistoryListAdapter.
     @NonNull
     @Override
     public HistoryListAdapter.StockViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).
-                inflate(R.layout.list_row_main, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_row_main, parent, false);
         return new StockViewHolder(itemView);
     }
 
@@ -46,15 +49,6 @@ public class HistoryListAdapter extends RecyclerView.Adapter<HistoryListAdapter.
             holder.stockTickerItemView.setText(R.string.no_stock_ticker_yet);
             holder.stockTimeItemView.setText(R.string.no_stock_date_picked_yet);
         }
-
-        holder.btDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Stock stock = stocks.get(holder.getAdapterPosition());
-                stocks.remove(stock);
-                notifyDataSetChanged();
-            }
-        });
     }
 
     public void setStocks(List<Stock> stocks) {
@@ -69,17 +63,40 @@ public class HistoryListAdapter extends RecyclerView.Adapter<HistoryListAdapter.
         return (stocks == null ? 0 : stocks.size());
     }
 
+    public void setClickListener(ItemClickListener itemClickListener) {
+        this.clickListener = itemClickListener;
+    }
+
+    public void removeAt(int position) {
+        stocks.remove(position);
+        notifyItemRemoved(position); // tell Recycler we've removed a stock
+        notifyItemRangeChanged(position, stocks.size()); // allow all views below item to adjust accordingly
+    }
+
     // Inner class holds and manages a view for one list item
-    public class StockViewHolder extends RecyclerView.ViewHolder {
+    public class StockViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView stockNameItemView, stockTickerItemView, stockTimeItemView;
         private ImageView btDelete;
 
         public StockViewHolder(@NonNull View itemView) {
             super(itemView);
-            stockNameItemView = itemView.findViewById(R.id.stock_name);
-            stockTickerItemView = itemView.findViewById(R.id.stock_ticker);
-            stockTimeItemView = itemView.findViewById(R.id.stock_time);
-            btDelete = itemView.findViewById(R.id.delete_stock);
+            stockNameItemView = itemView.findViewById(R.id.stock_name_history);
+            stockTickerItemView = itemView.findViewById(R.id.stock_ticker_history);
+            stockTimeItemView = itemView.findViewById(R.id.stock_date_history);
+            btDelete = itemView.findViewById(R.id.delete_stock_history);
+            btDelete.setOnClickListener(this);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            // checks to verify that the button delete has been clicked
+            if (v.equals(btDelete) && clickListener != null) {
+                int position = getAdapterPosition();
+                clickListener.onClick(v, position);
+                removeAt(position); // getPosition is deprecated
+            }
+
         }
     }
 }

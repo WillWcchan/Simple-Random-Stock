@@ -1,6 +1,5 @@
 package com.willchan.simple_random_stock.roomdatabase.daos;
 
-import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -23,10 +22,9 @@ public interface StockDao {
 
     // Must execute on a thread other than main thread
     @Query("DELETE FROM stock_table")
-    void deleteAll();
+    void deleteAllStocks();
 
-    // LiveData can help your app respond to data changes
-    // Must execute on a thread other than main thread
     @Query("SELECT * FROM stock_table")
-    LiveData<List<Stock>> getAll();
+    List<Stock> getAllStocks();
+
 }

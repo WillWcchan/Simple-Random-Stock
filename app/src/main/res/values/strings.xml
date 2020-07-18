@@ -31,5 +31,7 @@
     <string name="congratulations_picture">Congratulations picture</string>
     <string name="stock_name_hint">Apple (AAPL)</string>
     <string name="no_random_stock_selected_yet">No random stock selected yet</string>
+    <string name="delete_all_stocks">Delete all stocks</string>
+    <string name="about">About</string>
 
 </resources>

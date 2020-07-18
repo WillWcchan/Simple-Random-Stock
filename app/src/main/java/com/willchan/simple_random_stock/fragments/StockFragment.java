@@ -32,11 +32,15 @@ public class StockFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_stock, container, false);
         congratulationsImageView = view.findViewById(R.id.congratulationsImageView);
         congratulationsTitleTextView = view.findViewById(R.id.congratulationsTitle);
-        stockNameTextView = view.findViewById(R.id.stock_name);
+        stockNameTextView = view.findViewById(R.id.stock_name_history);
 
         Bundle bundle = getArguments();
         // if IndexStockFragment calls StockFragment and passes in data via a bundle
         if (bundle != null) {
+
+            // Have the UI background pause a bit for the background thread to load
+            // both the stock and delete
+
             String stockName = bundle.getString(StockFragment.stockNameBundle);
             String stockTicker = bundle.getString(StockFragment.stockTickerBundle);
             String placeHolder = stockName + " (" + stockTicker + ")";
