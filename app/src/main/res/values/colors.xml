@@ -5,4 +5,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="redMarket">#E11B1B</color>
     <color name="greenMarket">#2EFF00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="splashscreen">#77B1DC</color>
 </resources>

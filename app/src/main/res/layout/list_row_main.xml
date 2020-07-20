@@ -24,6 +24,8 @@
             android:id="@+id/stock_ticker_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginLeft="10sp"
             android:text="@string/stock_ticker"
             android:textAppearance="@style/Widget.MaterialComponents.CardView"
             android:textSize="14sp" />
