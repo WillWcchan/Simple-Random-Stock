@@ -34,11 +34,6 @@
                 android:layout_marginRight="30dp"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -47,8 +42,6 @@
                         android:textAllCaps="true"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="24sp" />
-
-                </LinearLayout>
 
             </LinearLayout>
 
@@ -83,11 +76,6 @@
                 android:layout_marginRight="30dp"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -97,8 +85,6 @@
                         android:textSize="24sp" />
 
                 </LinearLayout>
-
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -131,11 +117,6 @@
                 android:layout_marginRight="30dp"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -144,8 +125,6 @@
                         android:textAllCaps="true"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="24sp" />
-
-                </LinearLayout>
 
             </LinearLayout>
 
