@@ -4,8 +4,10 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -41,6 +43,10 @@ public class AboutActivity extends AppCompatActivity {
                 Log.e(AboutActivity.this.getLocalClassName(), "Unable to set Up Action");
             }
         }
+
+        // Adding a hyperlink in android application through TextView
+        TextView robinHoodTextView = findViewById(R.id.robinhood_referral_textView);
+        robinHoodTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     // Source: https://www.tutorialspoint.com/android/android_sending_email.htm#:~:text=Intent%20Object%20-%20Extra%20to%20send%20Email%20,that%20i%20...%20%203%20more%20rows%20

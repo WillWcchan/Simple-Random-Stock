@@ -33,5 +33,10 @@
     <string name="no_random_stock_selected_yet">No random stock selected yet</string>
     <string name="delete_all_stocks">Delete all stocks</string>
     <string name="about">About</string>
+    <string name="referral_links_to_support_the_creator">Referral Link(s) to support the creator</string>
+
+    <string name="robinhood_referral_link">
+        <a href="https://join.robinhood.com/williac1866"> https://join.robinhood.com/williac1866 </a>
+    </string>
 
 </resources>

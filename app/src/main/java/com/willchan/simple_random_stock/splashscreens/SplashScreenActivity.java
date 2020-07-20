@@ -16,6 +16,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
+        // Load up the SplashScreen when the app is brought up and after 2 seconds load the main app
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

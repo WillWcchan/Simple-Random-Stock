@@ -21,10 +21,10 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_height="100sp"
+        android:layout_marginTop="20sp"
         android:contentDescription="@string/app_logo"
-        android:src="@drawable/ic_place"
+        android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -33,7 +33,7 @@
         android:id="@+id/about_app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20sp"
         android:autofillHints="@string/app_name"
         android:background="@null"
         android:focusableInTouchMode="false"
@@ -51,7 +51,7 @@
         android:id="@+id/about_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20sp"
         android:autofillHints="@string/current_version"
         android:background="@null"
         android:focusableInTouchMode="false"
@@ -67,7 +67,7 @@
         android:id="@+id/about_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20sp"
         android:autofillHints="@string/author_name"
         android:background="@null"
         android:focusableInTouchMode="false"
@@ -82,7 +82,7 @@
         android:id="@+id/about_contact_information"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="20sp"
         android:autofillHints="@string/contact_information"
         android:background="@null"
         android:focusableInTouchMode="false"
@@ -97,7 +97,7 @@
         android:id="@+id/about_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20sp"
         android:autofillHints="@string/email_address"
         android:ems="10"
         android:focusableInTouchMode="false"
@@ -109,5 +109,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/about_contact_information" />
+
+    <TextView
+        android:id="@+id/supportTexView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:text="@string/referral_links_to_support_the_creator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_email" />
+
+    <TextView
+        android:id="@+id/robinhood_referral_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="20sp"
+        android:text="@string/robinhood_referral_link"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/supportTexView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
