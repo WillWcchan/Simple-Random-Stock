@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DisclaimerActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/disclaimer_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/disclaimer_appbar"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="60sp"
+        android:layout_marginRight="20sp"
+        android:text="@string/disclaimer"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView2"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="20sp"
+        android:text="@string/fullText_disclaimer"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+</RelativeLayout>

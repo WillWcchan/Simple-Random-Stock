@@ -9,15 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        <activity
+            android:name=".activities.DisclaimerActivity"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.willchan.simple_random_stock.MainActivity" />
+        </activity>
+
         <activity
             android:name=".splashscreens.SplashScreenActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activities.AboutActivity"
             android:parentActivityName=".MainActivity">
@@ -27,6 +38,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.willchan.simple_random_stock.MainActivity" />
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />

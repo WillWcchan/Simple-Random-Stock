@@ -16,6 +16,11 @@
                 android:id="@+id/about"
                 android:icon="@drawable/ic_info"
                 android:title="@string/about" />
+
+            <item
+                android:id="@+id/disclaimer"
+                android:icon="@drawable/ic_warning"
+                android:title="@string/disclaimer" />
         </menu>
     </item>
 

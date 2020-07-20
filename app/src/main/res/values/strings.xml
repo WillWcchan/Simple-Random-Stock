@@ -38,5 +38,11 @@
     <string name="robinhood_referral_link">
         <a href="https://join.robinhood.com/williac1866"> https://join.robinhood.com/williac1866 </a>
     </string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="fullText_disclaimer">Simple Random Stock is for fun and
+        educational purposes only. This application should not be viewed as
+        financial advice or stock recommendation to buy, sell, or hold any security or investment.
+        Investors should be cautious about any and all stock recommendations. Please consult
+        with a professional financial adviser before making any financial decisions.</string>
 
 </resources>

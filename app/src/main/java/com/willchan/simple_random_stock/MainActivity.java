@@ -14,6 +14,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.willchan.simple_random_stock.activities.AboutActivity;
+import com.willchan.simple_random_stock.activities.DisclaimerActivity;
 import com.willchan.simple_random_stock.adapters.TabLayoutAdapter;
 import com.willchan.simple_random_stock.fragments.IndexFragment;
 import com.willchan.simple_random_stock.viewmodels.StockViewModel;
@@ -81,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Deleting all stocks from history", Toast.LENGTH_LONG).show();
             if (stockViewModel != null)
                 stockViewModel.deleteAllStocks();
+            return true;
+        } else if (item.getItemId() == R.id.disclaimer) {
+            Intent intent = new Intent(this, DisclaimerActivity.class);
+            startActivity(intent);
             return true;
         } else {
             return super.onOptionsItemSelected(item);
