@@ -3,9 +3,9 @@
 Randomly select a stock from your favorite U.S index and have them saved in your history for future uses. 
 I created this application as a side project. I wanted to accomplish what I thought was impossible. I'm interested in the finance field. I wasn't able to find an app that would randomly select a stock for my style. Thus, I created this app.
 
-<img src="/readmeimages/index-tab.png" width="400" height="600">
-<img src="/readmeimages/stock-tab.png" width="400" height="600">
-<img src="/readmeimages/history-tab.png" width="400" height="600">
+<img align="left" src="/readmeimages/index-tab.png" width="320" height="600">
+<img align="left" src="/readmeimages/stock-tab.png" width="320" height="600">
+<img align="left" src="/readmeimages/history-tab.png" width="320" height="600">
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
