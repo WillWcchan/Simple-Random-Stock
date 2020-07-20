@@ -3,7 +3,7 @@
 Randomly select a stock from your favorite U.S index and have them saved in your history for future uses. 
 I created this application as a side project. I wanted to accomplish what I thought was impossible. I'm interested in the finance field. I wasn't able to find an app that would randomly select a stock for my style. Thus, I created this app.
 
-![Image of Index Tab](/readmeimages/index-tab.png){ width=50% height=50% }
+<img src="/readmeimages/index-tab.png" width="324" height="324">
 ![Image of Stock Tab](/readmeimages/stock-tab.png =100x20){ width="100px" height="100px" }
 ![Image of History Tab](/readmeimages/history-tab.png =100x20){ width="50px" height="50px" }
 
