@@ -131,13 +131,10 @@ public class RandomStockTest {
     }
 
     @Test
-    public void getRandomStockPositionForNullValue() {
-        boolean gotNull = false;
-        try {
-            RandomStock.getRandomStockPosition(null);
-        } catch (NullPointerException e) {
-            gotNull = true;
-        }
-        assertTrue(gotNull);
+    public void getRandomStockPositionForBadValue() {
+        boolean badValue;
+        int position = RandomStock.getRandomStockPosition(null);
+        badValue = position == -1;
+        assertTrue(badValue);
     }
 }

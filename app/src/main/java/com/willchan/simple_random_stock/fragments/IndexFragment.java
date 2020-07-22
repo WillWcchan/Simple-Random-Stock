@@ -77,18 +77,24 @@ public class IndexFragment extends Fragment {
             if (v.getId() == R.id.card_dow_jones) {
                 dow_index.setEnabled(false); // prevent double clicks
                 position = RandomStock.getRandomStockPosition(RandomStock.StockIndex.DOW);
-                name = RandomStock.getDow30StockName()[position];
-                ticker = RandomStock.getDow30StockTicker()[position];
+                if (position > 0) {
+                    name = RandomStock.getDow30StockName()[position];
+                    ticker = RandomStock.getDow30StockTicker()[position];
+                }
             } else if (v.getId() == R.id.card_spy500) {
                 spy_index.setEnabled(false);  // prevent double clicks
                 position = RandomStock.getRandomStockPosition(RandomStock.StockIndex.SPY);
-                name = RandomStock.getSpy500StockName()[position];
-                ticker = RandomStock.getSpy500StockTicker()[position];
+                if (position > 0) {
+                    name = RandomStock.getSpy500StockName()[position];
+                    ticker = RandomStock.getSpy500StockTicker()[position];
+                }
             } else if (v.getId() == R.id.card_nasdaq) {
                 nasdaq_index.setEnabled(false);  // prevent double clicks
                 position = RandomStock.getRandomStockPosition(RandomStock.StockIndex.NASDAQ);
-                name = RandomStock.getNasdaq100StockName()[position];
-                ticker = RandomStock.getNasdaq100StockTicker()[position];
+                if (position > 0) {
+                    name = RandomStock.getNasdaq100StockName()[position];
+                    ticker = RandomStock.getNasdaq100StockTicker()[position];
+                }
             }
 
             // Imitate getting a random stock

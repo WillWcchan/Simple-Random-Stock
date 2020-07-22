@@ -2,8 +2,6 @@ package com.willchan.simple_random_stock.util;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-
 import java.util.Random;
 
 public class RandomStock {
@@ -1283,7 +1281,7 @@ public class RandomStock {
         return NASDAQ100_STOCK_NAME;
     }
 
-    public static int getRandomStockPosition(@NonNull StockIndex stockIndex) {
+    public static int getRandomStockPosition(StockIndex stockIndex) {
         int position = -1;
         if (stockIndex == StockIndex.DOW) {
             position = new Random().nextInt(DOW30_STOCK_TICKER.length);
