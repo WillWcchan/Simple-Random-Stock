@@ -2,9 +2,12 @@ package com.willchan.simple_random_stock.util;
 
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+
 import java.util.Random;
 
 public class RandomStock {
+    private static final String TAG = "RandomStock";
 
     private static final String[] DOW30_STOCK_TICKER = new String[]{
             "MMM", "AXP", "AAPL", "BA", "CAT", "CVX", "CSCO",
@@ -1114,7 +1117,6 @@ public class RandomStock {
             "MDLZ",
             "MNST",
             "MYL",
-            "Symbol",
             "NTES",
             "NFLX",
             "NCLH",
@@ -1224,7 +1226,6 @@ public class RandomStock {
             "Mondelez International Inc",
             "Monster Beverage Corp",
             "Mylan NV",
-            "Name",
             "NetEase Inc",
             "Netflix Inc",
             "Norwegian Cruise Line Holdings Ltd",
@@ -1282,25 +1283,25 @@ public class RandomStock {
         return NASDAQ100_STOCK_NAME;
     }
 
-    public static int getRandomStock(StockIndex stockIndex) {
-        int position = 0;
+    public static int getRandomStockPosition(@NonNull StockIndex stockIndex) {
+        int position = -1;
         if (stockIndex == StockIndex.DOW) {
             position = new Random().nextInt(DOW30_STOCK_TICKER.length);
-            String ticker = DOW30_STOCK_TICKER[position];
-            String name = DOW30_STOCK_NAME[position];
+//            String ticker = DOW30_STOCK_TICKER[position];
+//            String name = DOW30_STOCK_NAME[position];
 //            System.out.println("Name " + name + " and Ticker: " + ticker);
         } else if (stockIndex == StockIndex.SPY) {
             position = new Random().nextInt(SPY500_STOCK_TICKER.length);
-            String ticker = SPY500_STOCK_TICKER[position];
-            String name = SPY500_STOCK_NAME[position];
+//            String ticker = SPY500_STOCK_TICKER[position];
+//            String name = SPY500_STOCK_NAME[position];
 //            System.out.println("Name " + name + " and Ticker: " + ticker);
         } else if (stockIndex == StockIndex.NASDAQ) {
             position = new Random().nextInt(NASDAQ100_STOCK_TICKER.length);
-            String ticker = NASDAQ100_STOCK_TICKER[position];
-            String name = NASDAQ100_STOCK_NAME[position];
+//            String ticker = NASDAQ100_STOCK_TICKER[position];
+//            String name = NASDAQ100_STOCK_NAME[position];
 //            System.out.println("Name " + name + " and Ticker: " + ticker);
         } else {
-            Log.e(RandomStock.class.toString(), "Maybe there's a new ENUM declared?");
+            Log.e(TAG, "Maybe there's a new ENUM declared?");
         }
         return position;
     }
