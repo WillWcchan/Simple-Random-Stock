@@ -13,6 +13,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 
+// Source: https://stackoverflow.com/questions/4671923/what-is-the-purpose-of-smalltest-mediumtest-and-largetest-annotations-in-an
 @RunWith(JUnit4.class)
 public class RandomStockTest {
 
@@ -21,37 +22,43 @@ public class RandomStockTest {
         mock(Log.class);
     }
 
-    // @SmallTest
+    //    @SmallTest
     @Test
     public void getDow30StockTickerLengthEqualTo30() {
         assertEquals(RandomStock.getDow30StockTicker().length, 30);
     }
 
+    //    @SmallTest
     @Test
     public void getDow30StockNameLengthEqualTo30() {
         assertEquals(RandomStock.getDow30StockName().length, 30);
     }
 
+    //    @SmallTest
     @Test
     public void getSPY500StockTickerLengthGreaterThanOrEqualTo500() {
         assertTrue(RandomStock.getSpy500StockTicker().length >= 500);
     }
 
+    //    @SmallTest
     @Test
     public void getSPY500StockNameLengthGreaterThanOrEqualTo500() {
         assertTrue(RandomStock.getSpy500StockName().length >= 500);
     }
 
+    //    @SmallTest
     @Test
     public void getNASDAQ100StockTickerLengthGreaterThanOrEqualTo100() {
         assertTrue(RandomStock.getNasdaq100StockTicker().length >= 100);
     }
 
+    //    @SmallTest
     @Test
     public void getNASDAQ100StockNameLengthGreaterThanOrEqualTo100() {
         assertTrue(RandomStock.getNasdaq100StockName().length >= 100);
     }
 
+    //    @SmallTest
     @Test
     public void getDow30StockTickerMMM() {
         boolean foundMMM = false;
@@ -65,6 +72,7 @@ public class RandomStockTest {
         assertTrue(foundMMM);
     }
 
+    //    @SmallTest
     @Test
     public void matchDow30StockTickerAndStockName() {
         String ticker = RandomStock.getDow30StockTicker()[18];
@@ -73,6 +81,7 @@ public class RandomStockTest {
                 stockName.equalsIgnoreCase("Microsoft Corp"));
     }
 
+    //    @SmallTest
     @Test
     public void getSPY500StockTickerCostco() {
         boolean foundCostco = false;
@@ -86,6 +95,7 @@ public class RandomStockTest {
         assertTrue(foundCostco);
     }
 
+    //    @SmallTest
     @Test
     public void matchSPY500StockTickerAndStockName() {
         String ticker = RandomStock.getSpy500StockTicker()[91];
@@ -94,6 +104,7 @@ public class RandomStockTest {
                 stockName.equalsIgnoreCase("Carnival Corp."));
     }
 
+    //    @SmallTest
     @Test
     public void getNASDAQ100StockTickerTesla() {
         boolean foundTelsa = false;
@@ -107,6 +118,7 @@ public class RandomStockTest {
         assertTrue(foundTelsa);
     }
 
+    //    @SmallTest
     @Test
     public void matchNASDAQ100StockTickerAndStockName() {
         String ticker = RandomStock.getNasdaq100StockTicker()[79];
@@ -115,21 +127,25 @@ public class RandomStockTest {
                 stockName.equalsIgnoreCase("NVIDIA Corp"));
     }
 
+    //    @SmallTest
     @Test
     public void getRandomStockPositionForDow() {
         assertTrue(RandomStock.getRandomStockPosition(RandomStock.StockIndex.DOW) > 0);
     }
 
+    //    @SmallTest
     @Test
     public void getRandomStockPositionForSPY() {
         assertTrue(RandomStock.getRandomStockPosition(RandomStock.StockIndex.SPY) > 0);
     }
 
+    //    @SmallTest
     @Test
     public void getRandomStockPositionForNASDAQ() {
         assertTrue(RandomStock.getRandomStockPosition(RandomStock.StockIndex.NASDAQ) > 0);
     }
 
+    //    @SmallTest
     @Test
     public void getRandomStockPositionForBadValue() {
         boolean badValue;

@@ -5,6 +5,7 @@ import android.content.Context;
 import androidx.room.Room;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.SmallTest;
 
 import com.willchan.simple_random_stock.roomdatabase.RoomDB;
 import com.willchan.simple_random_stock.roomdatabase.daos.StockDao;
@@ -41,6 +42,7 @@ public class StockDAOTest {
         db.close();
     }
 
+    @SmallTest
     @Test
     public void writeStockDAOAndReadInList() {
         boolean foundStock = false;
@@ -56,6 +58,7 @@ public class StockDAOTest {
         assertTrue(foundStock);
     }
 
+    @SmallTest
     @Test
     public void clearStockDAOList() {
         Objects.requireNonNull(stockDAO);

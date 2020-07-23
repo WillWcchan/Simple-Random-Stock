@@ -98,7 +98,7 @@ public class IndexFragment extends Fragment {
             }
 
             // Imitate getting a random stock
-            showDialog();
+//            showDialog();
 
             // Insert the newly random stock
             if (name != null && ticker != null) {
