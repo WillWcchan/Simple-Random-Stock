@@ -24,8 +24,9 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 
+@SmallTest
 @RunWith(AndroidJUnit4ClassRunner.class)
-public class MainActivityTest {
+public class IndexFragmentTest {
 
     @Rule
     public ActivityTestRule<MainActivity> activity = new ActivityTestRule<>(MainActivity.class);
@@ -49,31 +50,31 @@ public class MainActivityTest {
         };
     }
 
-    @SmallTest
+
     @Test
     public void mainActivityDisplayed() {
         onView(withId(R.id.activity_main)).check(matches(isDisplayed()));
     }
 
-    @SmallTest
+
     @Test
     public void dowJonesCardViewDisplayed() {
         onView(withId(R.id.card_dow_jones)).check(matches(isDisplayed()));
     }
 
-    @SmallTest
+
     @Test
     public void spyCardViewDisplayed() {
         onView(withId(R.id.card_spy500)).check(matches(isDisplayed()));
     }
 
-    @SmallTest
+
     @Test
     public void nasdaqCardViewDisplayed() {
         onView(withId(R.id.card_nasdaq)).check(matches(isDisplayed()));
     }
 
-    @SmallTest
+
     @Test
     public void dowJonesCardViewTextDisplayed() {
         ViewInteraction textView = onView(
@@ -87,7 +88,6 @@ public class MainActivityTest {
         textView.check(matches(withText("DOW JONES 30")));
     }
 
-    @SmallTest
     @Test
     public void spyCardViewTextDisplayed() {
         ViewInteraction textView2 = onView(
@@ -101,17 +101,6 @@ public class MainActivityTest {
         textView2.check(matches(withText("S&P 500")));
     }
 
-//    @SmallTest
-//    @Test
-//    public void clickDowCardAndSeeRandomStockGenerated() throws InterruptedException {
-//        onView(withId(R.id.card_dow_jones)).perform(click());
-//        Thread.sleep(3000);
-//        onView(withId(R.id.card)).check(matches(isDisplayed()));
-//        onView(withId(R.id.congratulationsImageView)).check(matches(isDisplayed()));
-//        onView(withId(R.id.congratulationsTitle)).check(matches(withText(R.string.congratulations)));
-//    }
-
-    @SmallTest
     @Test
     public void nasdaqViewTextDisplayed() {
         ViewInteraction textView3 = onView(

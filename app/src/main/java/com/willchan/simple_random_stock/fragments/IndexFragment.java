@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.willchan.simple_random_stock.BuildConfig;
 import com.willchan.simple_random_stock.MainActivity;
 import com.willchan.simple_random_stock.R;
 import com.willchan.simple_random_stock.roomdatabase.entities.Stock;
@@ -98,7 +99,9 @@ public class IndexFragment extends Fragment {
             }
 
             // Imitate getting a random stock
-//            showDialog();
+            // Source: https://stackoverflow.com/questions/23844667/how-do-i-detect-if-i-am-in-release-or-debug-mode
+            if (!BuildConfig.DEBUG)
+                showDialog();
 
             // Insert the newly random stock
             if (name != null && ticker != null) {

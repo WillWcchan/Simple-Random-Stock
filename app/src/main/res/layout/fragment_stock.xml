@@ -48,13 +48,14 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/stock_name_history"
+                android:id="@+id/stock_name_created"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8sp"
                 android:layout_marginBottom="8sp"
                 android:gravity="center"
                 android:hint="@string/stock_name_hint"
+                android:text="@string/no_random_stock_selected_yet"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="20sp" />

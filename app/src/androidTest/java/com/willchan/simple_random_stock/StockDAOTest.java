@@ -22,8 +22,8 @@ import java.util.Objects;
 import static org.junit.Assert.assertTrue;
 
 // Test and debug your database, source: https://developer.android.com/training/data-storage/room/testing-db
+@SmallTest
 @RunWith(AndroidJUnit4.class)
-
 public class StockDAOTest {
     private static final String FAKE_STOCK_NAME = "FakeStockName";
     private static final String FAKE_STOCK_TICKER = "FakeStockName";
@@ -42,7 +42,6 @@ public class StockDAOTest {
         db.close();
     }
 
-    @SmallTest
     @Test
     public void writeStockDAOAndReadInList() {
         boolean foundStock = false;
@@ -58,7 +57,6 @@ public class StockDAOTest {
         assertTrue(foundStock);
     }
 
-    @SmallTest
     @Test
     public void clearStockDAOList() {
         Objects.requireNonNull(stockDAO);
