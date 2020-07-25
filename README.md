@@ -11,6 +11,13 @@ I created this application as a side project. I wanted to accomplish what I thou
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
+## Mobile applications
+
+Operating System | Download |
+-----------------|----------|
+Android          | <a href='https://play.google.com/store/apps/details?id=com.willchan.simple_random_stock'><img alt='Get it on Google Play' height="40px" src='https://joplinapp.org/images/BadgeAndroid.png'></a>
+
+
 ### Technologies
 
 Simple Random stock uses a number of open source projects to work properly:
