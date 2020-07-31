@@ -40,6 +40,10 @@ Simple Random stock uses a number of open source projects to work properly:
 
 Want to contribute? Great! Submit a pull request
 
+### Test
+
+There are tests written in Junit and Espresso.
+
 ### Todos
 
  - Write MORE Tests
