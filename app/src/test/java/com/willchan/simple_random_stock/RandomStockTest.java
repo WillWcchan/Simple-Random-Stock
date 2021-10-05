@@ -77,8 +77,8 @@ public class RandomStockTest {
     public void matchDow30StockTickerAndStockName() {
         String ticker = RandomStock.getDow30StockTicker()[18];
         String stockName = RandomStock.getDow30StockName()[18];
-        assertTrue(ticker.equalsIgnoreCase("MSFT") &&
-                stockName.equalsIgnoreCase("Microsoft Corp"));
+        assertTrue(ticker.equalsIgnoreCase("HD") &&
+                stockName.equalsIgnoreCase("Home Depot Inc"));
     }
 
     //    @SmallTest
@@ -100,8 +100,8 @@ public class RandomStockTest {
     public void matchSPY500StockTickerAndStockName() {
         String ticker = RandomStock.getSpy500StockTicker()[91];
         String stockName = RandomStock.getSpy500StockName()[91];
-        assertTrue(ticker.equalsIgnoreCase("CCL") &
-                stockName.equalsIgnoreCase("Carnival Corp."));
+        assertTrue(ticker.equalsIgnoreCase("CTLT") &
+                stockName.equalsIgnoreCase("Catalent"));
     }
 
     //    @SmallTest
@@ -123,8 +123,8 @@ public class RandomStockTest {
     public void matchNASDAQ100StockTickerAndStockName() {
         String ticker = RandomStock.getNasdaq100StockTicker()[79];
         String stockName = RandomStock.getNasdaq100StockName()[79];
-        assertTrue(ticker.equalsIgnoreCase("NVDA") &
-                stockName.equalsIgnoreCase("NVIDIA Corp"));
+        assertTrue(ticker.equalsIgnoreCase("PYPL") &
+                stockName.equalsIgnoreCase("Paypal holdings"));
     }
 
     //    @SmallTest
