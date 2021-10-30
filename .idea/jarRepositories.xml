@@ -31,5 +31,15 @@
       <option name="name" value="maven" />
       <option name="url" value="https://dl.bintray.com/michelelacorte/maven/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="http://maven.restlet.org" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="http://maven.springframework.org/release" />
+    </remote-repository>
   </component>
 </project>
