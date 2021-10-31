@@ -1,0 +1,18 @@
+Have you ever been asked the following question from friends, family members, co-workers, or strangers on the street - What stock to buy?
+
+Or maybe you want to test your memorization skill and see which stock belongs to which U.S. indexes.
+
+Or maybe after all these technical and fundamental analysis. You've reached to a conclusion that you'll randomly throw a dart at a list of stocks and buy from there. 
+
+Well have no fear as this application was built to address those issues. 
+
+Simply click on one of US index and you'll be rewarded a random stock. The history tab will keep a history of all the random stocks you've been rewarded.
+
+Download the app and give it a try! Good Luck!
+
+If you find any bugs or areas of improvement, don't hesitate to shoot me an email for I am constantly developing my software skills. If you do find a bug, please inform me what android device and version you are running and what were the steps involved to recreate the problem. Thank you!
+
+I will continue making modifications and/or adding features on this app as time passes to include some open-source projects that I might find useful to the app. So stay tuned.
+
+Disclaimer:
+Simple Random Stock is for fun and educational purposes only. This application should not be viewed as financial advice or stock recommendation to buy, sell, or hold any security or investment. Investors should be cautious about any and all stock recommendations. Please consult with a professional financial adviser before making any financial decisions.

@@ -1,0 +1,2 @@
+json_key_file("/Users/Will/Desktop/pc-api-4771376623805209697-257-dfe973c35049.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("com.willchan.simple_random_stock") # e.g. com.krausefx.app
