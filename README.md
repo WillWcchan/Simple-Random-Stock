@@ -13,10 +13,12 @@ I created this application as a side project. I wanted to accomplish what I thou
 
 ## Mobile applications
 
-Operating System | Download |
------------------|----------|
-Android          | <a href='https://play.google.com/store/apps/details?id=com.willchan.simple_random_stock'><img alt='Get it on Google Play' height="40px" src='https://joplinapp.org/images/BadgeAndroid.png'></a>
-
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/com.willchan.simple_random_stock/)
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+     alt="Get it on Google Play"
+     height="80">](https://play.google.com/store/apps/details?id=com.willchan.simple_random_stock)
 
 ### Technologies
 
